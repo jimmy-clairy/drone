@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginning</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="module"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__container">
+            <div class="header__logo">Logo</div>
+            <nav class="header__nav">
+                <a href="#">Accueil</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const header = document.querySelector('.header__overlay')
+        window.addEventListener('scroll', () => {
+            // console.log(window.scrollY);
+            if (window.scrollY > 50) {
+                header.classList.add("active")
+            } else {
+                header.classList.remove("active")
+            }
+        })
+    </script>
+    <main>
+        <section class="banner">
+            <!-- <img class="banner__img" src="assets/img/drone_3.jpg" alt="Photo drone"> -->
+            <div class="overlay"></div>
+            <div class="banner__circle">
+                <p class="banner__litle-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h1 class="banner__heading">Adrenaline Juice.</h1>
+                <p class="banner__litle-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </section>
+        <section id="portfolio" class="portfolio">
+            <div class="overlay"></div>
+            <div class="portfolio__cards">
+                <a class="card" href="./assets/img/origin/drone_4.jpg" data-aos="flip-down" data-aos-duration="2000">
+                    <img src="./assets/img/webp320/drone-4.webp" alt="Photo de drone" width="320" height="180">
+                    <div class="overlay">Cliquez ici pour voir la photo en taille réel</div>
+                </a>
+                <a class="card" href="./assets/img/origin/drone_5.jpg" data-aos="flip-down" data-aos-duration="2000">
+                    <img src="./assets/img/webp320/drone-5.webp" alt="Photo de drone" width="320" height="180">
+                    <div class="overlay">Cliquez ici pour voir la photo en taille réel</div>
+                </a>
+                <a class="card" href="./assets/img/origin/drone_6.jpg" data-aos="flip-down" data-aos-duration="2000">
+                    <img src="./assets/img/webp320/drone-6.webp" alt="Photo de drone" width="320" height="180">
+                    <div class="overlay">Cliquez ici pour voir la photo en taille réel</div>
+                </a>
+                <a class="card" href="./assets/img/origin/drone_7.jpg" data-aos="flip-down" data-aos-duration="2000">
+                    <img src="./assets/img/webp320/drone-7.webp" alt="Photo de drone" width="320" height="180">
+                    <div class="overlay">Cliquez ici pour voir la photo en taille réel</div>
+                </a>
+                <a class="card" href="./assets/img/origin/drone_8.jpg" data-aos="flip-down" data-aos-duration="2000">
+                    <img src="./assets/img/webp320/drone-8.webp" alt="Photo de drone" width="320" height="180">
+                    <div class="overlay">Cliquez ici pour voir la photo en taille réel</div>
+                </a>
+                <a class="card" href="./assets/img/origin/drone_1.jpg" data-aos="flip-down" data-aos-duration="2000">
+                    <img src="./assets/img/webp320/drone-1.webp" alt="Photo de drone" width="320" height="180">
+                    <div class="overlay">Cliquez ici pour voir la photo en taille réel</div>
+                </a>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="overlay"></div>
+            <h2>Contact</h2>
+        </section>
+    </main>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
