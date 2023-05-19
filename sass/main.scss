@@ -1,58 +1,8 @@
 @import "bases/reset";
 @import "utils/variables";
+@import "utils/mixins";
 @import "bases/general";
-
-
-.header {
-    color: #fff;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100%;
-    height: 8rem;
-    font-size: 2.4rem;
-    letter-spacing: 0.1rem;
-
-    &__overlay {
-        position: absolute;
-        background: linear-gradient(to right, #4b00e0dd, #8d2de2dd);
-        height: 8rem;
-        width: 100%;
-        top: 0;
-        z-index: 5;
-        transform: translateX(-100%);
-        transition: 1s;
-
-        &.active {
-            transform: translateX(0);
-        }
-    }
-
-
-
-
-    &__container {
-        position: relative;
-        z-index: 10;
-        max-width: 120rem;
-        width: 90%;
-        margin: auto;
-        display: flex;
-        height: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__nav {
-        display: none;
-
-        @media screen and (min-width:600px) {
-            display: flex;
-            gap: 6rem;
-        }
-    }
-}
-
+@import "layouts/header";
 
 section {
     position: relative;
@@ -65,8 +15,18 @@ section {
     background-size: cover;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .banner {
     background-image: url('../assets/img/webp1920/drone-1.webp');
+    background-position: 60% 50%;
 
     &__circle {
         position: absolute;
@@ -79,7 +39,7 @@ section {
         border-radius: 50%;
         background: $cl-gradient;
 
-        @media screen and (min-width:600px) {
+        @include tablette {
             height: 50rem;
             width: 50rem;
         }
@@ -91,7 +51,7 @@ section {
         font-size: 2rem;
         margin: 0;
 
-        @media screen and (min-width:600px) {
+        @include tablette {
             font-size: 3rem;
         }
     }
@@ -101,7 +61,7 @@ section {
         font-size: 3rem;
         text-transform: uppercase;
 
-        @media screen and (min-width:600px) {
+        @include tablette {
             font-size: 4rem;
         }
     }
@@ -124,15 +84,16 @@ section {
 
         .card {
             position: relative;
+            border-radius: 5px;
+            overflow: hidden;
         }
 
         img {
             display: block;
             width: 100%;
             max-width: 32rem;
-            object-fit: cover;
             cursor: pointer;
-            border-radius: 5px;
+
         }
 
         .overlay {
@@ -143,11 +104,10 @@ section {
             top: 0;
             background: rgba(0, 0, 0, 0.6);
             width: 100%;
-            transition: .5s ease;
-            opacity: 0;
             font-size: 2rem;
             padding: 2rem;
-            border-radius: 5px;
+            transition: .4s;
+            opacity: 0;
         }
 
         .card:hover .overlay {
@@ -162,13 +122,4 @@ section {
 .contact {
     background-image: url('../assets/img/webp1920/drone-3.webp');
     background-position: 50% 20%;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
 }
