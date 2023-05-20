@@ -1,0 +1,82 @@
+section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 6rem;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner {
+    background-image: url('../assets/img/webp1920/drone-1.webp');
+    background-position: 60% 50%;
+
+    &__circle {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 29rem;
+        width: 29rem;
+        border-radius: 50%;
+        background: $cl-gradient;
+
+        @include tablette {
+            height: 50rem;
+            width: 50rem;
+        }
+    }
+
+    &__litle-title {
+        font-family: 'Parisienne', cursive;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+
+        @include tablette {
+            font-size: 3rem;
+        }
+    }
+
+    &__heading {
+        margin: 2rem 0;
+        font-size: 3rem;
+        text-transform: uppercase;
+
+        @include tablette {
+            font-size: 4rem;
+        }
+    }
+}
+
+.portfolio {
+    background-image: url('../assets/img/webp1920/drone-2.webp');
+    background-position: 50% 20%;
+    padding: 5%;
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 100rem;
+        width: 95%;
+    }
+}
+
+.contact {
+    background-image: url('../assets/img/webp1920/drone-3.webp');
+    background-position: 50% 20%;
+}
