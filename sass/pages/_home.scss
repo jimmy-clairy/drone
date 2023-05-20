@@ -52,11 +52,11 @@ section {
 
     &__heading {
         margin: 2rem 0;
-        font-size: 3rem;
+        font-size: 2.8rem;
         text-transform: uppercase;
 
         @include tablette {
-            font-size: 4rem;
+            font-size: 4.4rem;
         }
     }
 }
